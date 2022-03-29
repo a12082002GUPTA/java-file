@@ -1,0 +1,30 @@
+import java.util.Scanner;
+class Circle
+{
+    public static void main(String args[])
+    {
+        Scanner sc=new Scanner(System.in);
+        double ar,circumference;
+        System.out.print("enter radius of circle\n");
+        double r=sc.nextDouble();
+        if(r>=0)
+        {
+            ar=area(r);
+            circumference=circumference_circle(r);
+            System.out.print("area of circle\n"+ar);
+            System.out.print("circumference of circle\n"+circumference);
+        }
+        else
+        {
+            System.out.print("invalid circle\n");
+        }
+    }
+    public static double area( double r)
+    {
+        return ((3.14)*r*r);
+    }
+    public static double circumference_circle(double r)
+    {
+        return ((3.14)*r*2 );
+    }
+}
